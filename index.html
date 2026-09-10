@@ -1,50 +1,103 @@
 <!DOCTYPE html>
+
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Web App</title>
+    <meta charset="UTF-8">
 
-  <!-- Izinkan akses fitur browser -->
-  <meta http-equiv="Permissions-Policy"
-        content="camera=(self), microphone=(self), geolocation=(self)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <title>Membuka KuroCard...</title>
 
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #ffffff;
-    }
+   
 
-    iframe {
-      display: block;
-      width: 100%;
-      height: 100vh;
-      height: 100dvh;
-      border: 0;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+    <!-- Cara 1: HTML Meta Refresh (Pengalihan Otomatis dalam 0 detik) -->
+
+    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbxv8WuDbXxtzqL9vBl-fc7YuU5mRBndEo4DNTdATrYSi1CSG6stYBhdM4SoW4KSRDzT/exec" />
+
+
+
+    <style>
+
+        body {
+
+            background-color: #09090b; /* Warna gelap senada dengan KuroCard */
+
+            color: #ffffff;
+
+            font-family: 'Inter', sans-serif;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            margin: 0;
+
+        }
+
+        .spinner {
+
+            width: 40px;
+
+            height: 40px;
+
+            border: 4px solid #18181b;
+
+            border-top: 4px solid #2563eb;
+
+            border-radius: 50%;
+
+            animation: spin 1s linear infinite;
+
+            margin-bottom: 16px;
+
+        }
+
+        @keyframes spin {
+
+            0% { transform: rotate(0deg); }
+
+            100% { transform: rotate(360deg); }
+
+        }
+
+        p {
+
+            font-size: 14px;
+
+            color: #a1a1aa;
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-  <iframe
-    src="https://script.google.com/macros/s/AKfycbxv8WuDbXxtzqL9vBl-fc7YuU5mRBndEo4DNTdATrYSi1CSG6stYBhdM4SoW4KSRDzT/exec"
-    allow="camera; microphone; geolocation; fullscreen"
-    allowfullscreen
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+
+
+    <div class="spinner"></div>
+
+    <p>Membuka KuroCard...</p>
+
+
+
+    <script>
+
+        // Memaksa browser pindah ke link Apps Script secara langsung (bukan iframe)
+
+        window.location.href = "https://script.google.com/macros/s/AKfycbxv8WuDbXxtzqL9vBl-fc7YuU5mRBndEo4DNTdATrYSi1CSG6stYBhdM4SoW4KSRDzT/exec";
+
+    </script>
 
 </body>
+
 </html>
